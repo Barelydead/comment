@@ -22,15 +22,6 @@
         }
     },
     "require": {
-        "php": ">=5.6",
-        "anax/remserver": "dev-master"
+        "php": ">=5.6"
     }
-    {
-    "repositories": [
-        {
-            "type": "vcs",
-            "url":  "https://github.com/barelydead/comments.git"
-        }
-    ]
-}
 }
