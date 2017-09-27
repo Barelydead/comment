@@ -1,6 +1,6 @@
 <?php
 
-namespace Anax\Comment;
+namespace CJ\Comment;
 
 use \Anax\DI\InjectionAwareInterface;
 use \Anax\DI\InjectionAwareTrait;

@@ -1,5 +1,5 @@
 {
-    "name": "anax/comment",
+    "name": "cj/comment",
     "type": "library",
     "description": "Anax comments module.",
     "keywords": ["boilerplate", "framework", "mvc", "micro", "education"],
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Anax\\": "src/"
+            "CJ\\": "src/"
         }
     },
     "require": {
