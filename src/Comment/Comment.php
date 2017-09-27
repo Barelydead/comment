@@ -1,5 +1,5 @@
 <?php
-namespace CJ\Comment;
+namespace Anax\Comment;
 
 use \Anax\Database\ActiveRecordModel;
 
