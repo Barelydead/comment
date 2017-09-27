@@ -4,8 +4,6 @@ namespace CJ\Comment;
 
 use \Anax\DI\InjectionAwareInterface;
 use \Anax\DI\InjectionAwareTrait;
-use \CJ\User\User;
-use \CJ\Comment\Comment;
 use \CJ\Comment\HTMLForm\CreateCommentForm;
 use \CJ\Comment\HTMLForm\EditCommentForm;
 
@@ -45,7 +43,7 @@ class CommentController implements InjectionAwareInterface
     public function removeComment($index)
     {
         $user = $this->di->get("umodel");
-        $comment = $this->di->get("cmodel");
+        $comment = $this->di->get("comment");
 
         $comment->getComment($index);
 
@@ -68,7 +66,7 @@ class CommentController implements InjectionAwareInterface
      */
     public function editComment($index)
     {
-        $comment = $this->di->get("cmodel")->getComment($index);
+        $comment = $this->di->get("comment")->getComment($index);
         $user = $this->di->get("umodel");
 
 
@@ -96,7 +94,7 @@ class CommentController implements InjectionAwareInterface
     public function renderComments()
     {
         $data = ["title" => "guestbook"];
-        $comments = $this->di->get("cmodel")->getComments();
+        $comments = $this->di->get("comment")->getComments();
         $comments = array_reverse($comments);
 
         $this->di->get("view")->add("components/commentholder", ["comments" => $comments], "main");
