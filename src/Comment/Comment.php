@@ -19,7 +19,8 @@ class Comment extends ActiveRecordModel
      * @var integer $id primary key auto incremented.
      */
     public $id;
-    public $user;
+    public $userId;
+    public $userMail;
     public $msg;
     public $heading;
     public $postDate;
@@ -59,5 +60,18 @@ class Comment extends ActiveRecordModel
     {
         $this->find("id", $index);
         $this->delete();
+    }
+
+
+    /**
+     * @return string
+     * Get the avatar HTML
+     */
+    public function getAvatar($classes = "", $size = 125)
+    {
+        $hash = md5($this->userMail);
+
+        $html = "<img src='https://www.gravatar.com/avatar/$hash?s=$size&default=mm' class='$classes'>";
+        return $html;
     }
 }

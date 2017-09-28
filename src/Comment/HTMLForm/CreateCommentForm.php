@@ -16,7 +16,7 @@ class CreateCommentForm extends FormModel
      *
      * @param Anax\DI\DIInterface $di a service container
      */
-    public function __construct(DIInterface $di, $userId)
+    public function __construct(DIInterface $di, $user)
     {
         parent::__construct($di);
         $this->form->create(
@@ -37,7 +37,11 @@ class CreateCommentForm extends FormModel
                 ],
                 "user" => [
                     "type" => "hidden",
-                    "value" => "$userId"
+                    "value" => "$user->id"
+                ],
+                "userMail" => [
+                    "type" => "hidden",
+                    "value" => "$user->mail"
                 ],
                 "submit" => [
                     "type" => "submit",
@@ -59,12 +63,14 @@ class CreateCommentForm extends FormModel
         $title = $this->form->value("title");
         $message = $this->form->value("message");
         $user = $this->form->value("user");
+        $userMail = $this->form->value("userMail");
 
         $comment = new Comment();
         $comment->setDb($this->di->get("db"));
 
         $comment->msg = $message;
-        $comment->user = $user;
+        $comment->userId = $user;
+        $comment->userMail = $userMail;
         $comment->heading = $title;
         $comment->save();
 

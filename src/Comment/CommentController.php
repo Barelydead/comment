@@ -27,7 +27,7 @@ class CommentController implements InjectionAwareInterface
             $this->di->get("response")->redirect($this->di->get("url")->create("user/login"));
         }
 
-        $form = new CreateCommentForm($this->di, $umodel->getLoggedInUserId());
+        $form = new CreateCommentForm($this->di, $umodel->getLoggedInUser());
         $form->check();
 
         $data = ["form" => $form->getHTML()];
@@ -44,9 +44,7 @@ class CommentController implements InjectionAwareInterface
     {
         $user = $this->di->get("umodel");
         $comment = $this->di->get("comment");
-
         $comment->getComment($index);
-
 
         if ($comment->user !== $this->di->get("session")->get("user")) {
             if ($user->isUserAdmin()) {
@@ -55,7 +53,6 @@ class CommentController implements InjectionAwareInterface
                 $this->di->get("response")->redirect($this->di->get("url")->create("comment"));
             }
         }
-
 
         $comment->deleteComment($index);
         $this->di->get("response")->redirect($this->di->get("url")->create("comment"));
@@ -95,9 +92,17 @@ class CommentController implements InjectionAwareInterface
     {
         $data = ["title" => "guestbook"];
         $comments = $this->di->get("comment")->getComments();
+        $user = $this->di->get("umodel")->getLoggedInUser();
+        
+        $profilePic = $this->di->get("comment")->getAvatar("pull-left margin-right");
         $comments = array_reverse($comments);
 
-        $this->di->get("view")->add("components/commentholder", ["comments" => $comments], "main");
+        $this->di->get("view")->add("components/commentholder", [
+            "comments" => $comments,
+            "user" => $user,
+            "profilePic" => $profilePic
+        ], "main");
+
         $this->di->get("pageRender")->renderPage($data);
     }
 }
