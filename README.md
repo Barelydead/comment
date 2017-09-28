@@ -12,10 +12,10 @@ Anax comments
 
 Anax comments module.
 
+Install
+--------------------
 
 
-Usage
-------------------
 
 Short examples on how to use the module comments.
 

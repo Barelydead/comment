@@ -22,5 +22,13 @@ return [
                 return $cmodel;
             }
         ],
+        "umodel" => [
+            "shared" => false,
+            "callback" => function () {
+                $umodel = new \CJ\User\User();
+                $umodel->init($this->get("db"), $this->get("session"));
+                return $umodel;
+            }
+        ],
     ],
 ];

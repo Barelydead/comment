@@ -2,6 +2,7 @@
 
 /** Config comment routes */
 return [
+    "mount" => "comment";
     "routes" => [
         [
             "info" => "redirct and render Comment page",
