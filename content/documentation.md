@@ -20,12 +20,33 @@ Have a scaffolded or otherwise functioning instance of the anax framework.
 
 Install
 --------------------
-####To download module
-```composer require cj/comment```
+You can install the module by using composer.
+```
+composer require cj/comment
+```
 
+post-install settings
+----------------------------------
+##### Get api documentation
+```
+rsync -av vendor/cj/comment/content/documentation.md content/documentation.md
+```
 
+##### Copy the routefile
+```
+rsync -av vendor/cj/comment/config/route/comments.php config/route
+```
+Add the comments route to your route config file. Se sample in
+```
+vendor/cj/comment/config/route.php
+```
 
-Short examples on how to use the module comments.
+##### Add dependencies to DI-container
+Add the dependencies to your di config file. Se sample in
+```
+vendor/cj/comment/config/di.php
+```
+
 
 
 

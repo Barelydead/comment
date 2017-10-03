@@ -1,6 +1,6 @@
 -- Create a database for test
 CREATE DATABASE IF NOT EXISTS testdb;
-USE anaxdb;
+USE testdb;
 
 
 -- Create a database user for the test database

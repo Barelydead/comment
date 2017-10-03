@@ -14,8 +14,6 @@ class CommentController implements InjectionAwareInterface
 {
     use InjectionAwareTrait;
 
-
-
     /**
      * process incomming POST
      */
@@ -93,7 +91,7 @@ class CommentController implements InjectionAwareInterface
         $data = ["title" => "guestbook"];
         $comments = $this->di->get("comment")->getComments();
         $user = $this->di->get("umodel")->getLoggedInUser();
-        
+
         $profilePic = $this->di->get("comment")->getAvatar("pull-left margin-right");
         $comments = array_reverse($comments);
 

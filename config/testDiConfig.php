@@ -34,7 +34,14 @@ return [
             "shared" => true,
             "callback" => function () {
                 $obj = new \Anax\Database\DatabaseQueryBuilder();
-                $obj->configure("database.php");
+                $obj->configure("testDatabaseConfig.php");
+                return $obj;
+            }
+        ],
+        "session" => [
+            "shared" => true,
+            "callback" => function () {
+                $obj = new \Anax\Session\Session();
                 return $obj;
             }
         ],
