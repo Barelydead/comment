@@ -92,13 +92,11 @@ class CommentController implements InjectionAwareInterface
         $comments = $this->di->get("comment")->getComments();
         $user = $this->di->get("umodel")->getLoggedInUser();
 
-        $profilePic = $this->di->get("comment")->getAvatar("pull-left margin-right");
         $comments = array_reverse($comments);
 
         $this->di->get("view")->add("components/commentholder", [
             "comments" => $comments,
-            "user" => $user,
-            "profilePic" => $profilePic
+            "user" => $user
         ], "main");
 
         $this->di->get("pageRender")->renderPage($data);

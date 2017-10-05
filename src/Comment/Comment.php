@@ -67,8 +67,9 @@ class Comment extends ActiveRecordModel
      * @return string
      * Get the avatar HTML
      */
-    public function getAvatar($classes = "", $size = 125)
+    public function getAvatar($index, $classes = "", $size = 125)
     {
+        $this->find("id", $index);
         $hash = md5($this->userMail);
 
         $html = "<img src='https://www.gravatar.com/avatar/$hash?s=$size&default=mm' class='$classes'>";
