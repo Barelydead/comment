@@ -1,9 +1,9 @@
 CJ comment
 ==================================
 
-[![Latest Stable Version](https://poser.pugx.org/cj/comments/v/stable)](https://packagist.org/packages/cj/comment)
-[![Join the chat at
+[![Latest Stable Version](https://poser.pugx.org/cj/comments/v/stable)](https://packagist.org/packages/Barelydead/comment)
 [![Build Status](https://travis-ci.org/Barelydead/comment.svg?branch=master)](https://travis-ci.org/barelydead/comment)
+[![CircleCI](https://circleci.com/gh/barelydead/comment.svg?style=svg)](https://circleci.com/gh/barelydead/comment)
 
 
 Anax comment module.
