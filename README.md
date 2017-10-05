@@ -2,8 +2,11 @@ CJ comment
 ==================================
 
 [![Latest Stable Version](https://poser.pugx.org/cj/comments/v/stable)](https://packagist.org/packages/Barelydead/comment)
-[![Build Status](https://travis-ci.org/Barelydead/comment.svg?branch=master)](https://travis-ci.org/barelydead/comment)
+[![Build Status](https://travis-ci.org/Barelydead/comment)](https://travis-ci.org/Barelydead/comment)
 [![CircleCI](https://circleci.com/gh/barelydead/comment.svg?style=svg)](https://circleci.com/gh/barelydead/comment)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Barelydead/comment/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Barelydead/comment/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/Barelydead/comment/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Barelydead/comment/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/Barelydead/comment/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Barelydead/comment/build-status/master)
 
 
 Anax comment module.
