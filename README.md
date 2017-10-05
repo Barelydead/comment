@@ -1,16 +1,12 @@
-CJ comments
+CJ comment
 ==================================
 
-[![Latest Stable Version](https://poser.pugx.org/cj/comments/v/stable)](https://packagist.org/packages/anax/comments)
-[![Join the chat at https://gitter.im/mosbth/anax](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/barelydead?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](https://travis-ci.org/barelydead/comments.svg?branch=master)](https://travis-ci.org/barelydead/comments)
-[![CircleCI](https://circleci.com/gh/barelydead/comments.svg?style=svg)](https://circleci.com/gh/barelydead/comments)
-[![Build Status](https://scrutinizer-ci.com/g/barelydead/comments/badges/build.png?b=master)](https://scrutinizer-ci.com/g/barelydead/comments/build-status/master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/barelydead/comments/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/barelydead/comments/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/barelydead/comments/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/barelydead/comments/?branch=master)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/d831fd4c-b7c6-4ff0-9a83-102440af8929/mini.png)](https://insight.sensiolabs.com/projects/d831fd4c-b7c6-4ff0-9a83-102440af8929)
+[![Latest Stable Version](https://poser.pugx.org/cj/comments/v/stable)](https://packagist.org/packages/cj/comment)
+[![Join the chat at
+[![Build Status](https://travis-ci.org/Barelydead/comment.svg?branch=master)](https://travis-ci.org/barelydead/comment)
 
-Anax comments module.
+
+Anax comment module.
 
 Requirements
 -----------------
