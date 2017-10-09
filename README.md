@@ -7,6 +7,7 @@ CJ comment
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Barelydead/comment/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Barelydead/comment/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/Barelydead/comment/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Barelydead/comment/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/Barelydead/comment/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Barelydead/comment/build-status/master)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/de22a305-f8c1-4133-b6ce-c4c4fc9b4e77/mini.png)](https://insight.sensiolabs.com/projects/de22a305-f8c1-4133-b6ce-c4c4fc9b4e77)
 
 
 Anax comment module.
