@@ -9,17 +9,22 @@ use CJ\Comment\Comment;
 class EditCommentFormTest extends \PHPUnit_Framework_TestCase
 {
     protected $di;
+    protected $form;
 
     protected function setUp()
     {
         $this->di = new \Anax\DI\DIFactoryConfig("testDiConfig.php");
+        $comment = new Comment();
+        $this->form = new EditCommentForm($this->di, $comment);
     }
 
     public function testConstruct()
     {
-        $comment = new Comment();
-        $form = new EditCommentForm($this->di, $comment);
+        $this->assertTrue(is_string($this->form->getHTML()));
+    }
 
-        $this->assertTrue(is_string($form->getHTML()));
+    public function testCallback()
+    {
+        $this->assertTrue($this->form->callbackSubmit());
     }
 }
