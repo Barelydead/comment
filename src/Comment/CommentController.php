@@ -44,7 +44,7 @@ class CommentController implements InjectionAwareInterface
         $comment = $this->di->get("comment");
         $comment->getComment($index);
 
-        if ($comment->user !== $this->di->get("session")->get("user")) {
+        if ($comment->userId !== $this->di->get("session")->get("user")) {
             if ($user->isUserAdmin()) {
                 // Do nothing
             } else {
@@ -65,7 +65,7 @@ class CommentController implements InjectionAwareInterface
         $user = $this->di->get("umodel");
 
 
-        if ($comment->user !== $this->di->get("session")->get("user")) {
+        if ($comment->userId !== $this->di->get("session")->get("user")) {
             if ($user->isUserAdmin()) {
                 // Do nothing
             } else {

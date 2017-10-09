@@ -83,8 +83,8 @@ class User extends ActiveRecordModel
     */
     public function deleteUser($id)
     {
-        $this->user->find("id", $id);
-        $this->user->delete();
+        $this->find("id", $id);
+        $this->delete();
     }
 
 

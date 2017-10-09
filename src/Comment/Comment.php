@@ -32,7 +32,8 @@ class Comment extends ActiveRecordModel
     /**
     *  Inits the object with the dabase
     */
-    public function init($db) {
+    public function init($db)
+    {
         $this->setDb($db);
     }
 
